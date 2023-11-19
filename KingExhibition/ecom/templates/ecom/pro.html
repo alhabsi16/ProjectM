@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Cars Detils</title>
+    {%load static %}
+       <link rel="stylesheet" type="text/css" href="{%static 'style/style.css' %}" />
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% block content%}
+        <!--Navigation-->
+        <nav class="nav">
+            <div class="navigation container">
+            <div class="logo">
+                <h1>CONSTRUCTION EQUIPMENT RENTAL APP</h1>
+            </div>
+            <div class="menu">
+             <div class="top-nav">
+              <div class="logo">
+                  <h1>RENTAL APP</h1>
+                  </div>
+                 <div class="close">
+                    <i class='bx bx-x'></i>
+                 </div>
+             </div>
+             <ul class="nav-list">
+                 <li class="nav-item">
+                     <a href="{% url 'home' %}" class="nav-link">Home</a>
+                 <li class="nav-item">
+                     <a href="{% url 'product' %}" class="nav-link">Product</a>
+                 <li class="nav-item">
+                     <a href="{% url 'about1' %}" class="nav-link ">About</a>
+                 <li class="nav-item">
+                     <a href="{% url 'shopping' %}" class="nav-link ">Shopping</a>
+                 <li class="nav-item">
+                     <a href="{% url 'contact' %}" class="nav-link ">Contact</a>
+                 <li class="nav-item">
+                     <a href="{% url 'cart' %}" class="nav-link icon"></a>
+                     <i class="bx bx-shopping-bag"></i>
+                      <a href="{% url 'home' %}"></a>
+                      <a href="{% url 'product' %}"></a>
+                 </li>
+             </ul>
+                <a href="{% url 'cart' %}" class="cart-icon">
+                 <i class= "bx bx-shopping-bag"></i>
+                </a>
+                <div class="hamburger">
+                    <i class="bx bx-menu"></i>
+                </div>
+            </div>
+        </div>
+        </nav>
+
+    <!--Product details-->
+    <section class="section product-detail">
+        <div class="details container-md">
+            <div class="left">
+                <div class="main">
+                    <img src="../../static/image/Mikasa-roller-dealer-in-oman-1.jpg" alt="" />
+                </div>
+            
+            </div>
+            <div class="right">
+                <span>..The most beautiful product</span>
+                <h1>Mikasa double cylinder</h1>
+                <form class="form">
+                     <a href="{% url 'shopping' %}" class="addCart">Back</a>
+                </form>
+                <h3>Product Details</h3>
+                <p2>Engine power is 10 hp, 7.4 kW Drum width 650 mm 
+                Centrifugal force 23.5 kN (2400 kg) Travel speed 0-3 km / h 
+                Vibration frequency 55 Hz (3300 vpm) Max. Grade ability 35% Weight 700 kg</p2>
+
+            </div>
+        </div>
+    </section>
+
+
+     <section class="section product-detail">
+        <div class="details container-md">
+            <div class="left">
+                <div class="main">
+                    <img src="../../static/image/Double-bender.jpg" alt="" />
+                </div>
+            </div>
+            <div class="right">
+                <span>..The most beautiful product</span>
+                <h1>Bar Bender</h1>
+                <form class="form">
+                     <a href="{% url 'cart' %}" class="addCart">Back</a>
+                </form>
+                <h3>Product Details</h3>
+                <p2>Maxi. Bending capacity - 40 mm dia. steel rod
+                    Engine power - 5.3 hp
+                    Voltage - 415 V / 3 phase
+                    Dimensions LxWxH - 1100x840x890 mm
+                    Device weight - 430 kg</p2>
+            </div>
+        </div>
+    </section>
+    <section class="section product-detail">
+        <div class="details container-md">
+            <div class="left">
+                <div class="main">
+                    <img src="../../static/image/Concrete-mixer-elelctric-hlaf-bag-_Syntesi_S350.jpg" alt="" />
+                </div>
+            </div>
+            <div class="right">
+                <span>..The most beautiful product</span>
+                <h1>concrete mixer</h1>
+                <form class="form">
+                     <a href="{% url 'shopping' %}" class="addCart">Back</a>
+                </form>
+                <h3>Product Details</h3>
+                <p2>Drum capacity: 138 liters
+                    Batch output: 100 liters 
+                    Drum diameter: 610 mm
+                    Wheel dimensions: 200 x 50 mm
+                    Electric motor rated power: 230V/50Hz 0.3kw
+                    Operating current: 230V 2.2A
+                    SPL in trigger mode: 72 dB(A)
+                    Machine weight: 54 kg</p2>
+            </div>
+        </div>
+    </section>
+    {% endblock content%}
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+   <script src="../../static/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Contact</title>
+    {%load static %}
+     <link rel="stylesheet" type="text/css" href="{%static 'style/style.css' %}" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% block content%}
+    <!---Header-->
+    <header id="home" class="header">
+        <!--Navigation-->
+        <nav class="nav">
+            <div class="navigation container">
+            <div class="logo">
+                <h1><img src="../../static/image/Picture2.png" alt=""/></h1>
+            </div>
+            <div class="menu">
+             <div class="top-nav">
+              <div class="logo">
+                  <h1>KING FOR CARS</h1>
+                  </div>
+                 <div class="close">
+                    <i class='bx bx-x'></i>
+                 </div>
+             </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="{% url 'home' %}" class="nav-link scroll-link">Home</a>
+                        <li class="nav-item">
+                        <a href="{% url 'product' %}" class="nav-link">Product</a>
+                            <li class="nav-item">
+                        <a href="{% url 'about1' %}" class="nav-link">About Us</a>
+                            <li class="nav-item">
+                       
+                        <a href="{% url 'shopping' %}"  class="alla">Shopping</a>
+                                     <li class="nav-item">
+                        <a href="{% url 'contact' %}" class="nav-link ">Contact</a>
+                                         <li class="nav-item">
+                        <a href="{% url 'cart' %}" class="nav-link icon"></a>
+                        <i class= "bx bx-shopping-bag"></i>
+                    </li>
+                </ul>
+           </div>
+            </div>
+                  </nav>
+        </header>
+    <footer>
+        <div class="main-content">
+            <div class="left box">
+                <h2>About us</h2>
+                <div class="content">
+                <p>That is why we have created this online application to 
+                    easily see and know all the high-quality luxury construction equipment.</p>
+                    <div class="Social">
+                         <a href="#"><span class="fab fa-facebook-f"></span></a>
+                         <a href="#"><span class="fab fa-twitter"></span></a>
+                         <a href="#"><span class="fab fa-instagram"></span></a>
+                         <a href="#"><span class="fab fa-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="center box">
+                <h2>Address</h2>
+                <div class="content">
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">Birenderanagar, Surkhet</span>
+                    </div>
+                    <div class="phone">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text">+089-765432100</span>
+                    </div>
+                    <div class="email">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text">Manar_Alslmani@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right box">
+                <h2>Contact Us</h2>
+                <div class="contact">
+                    <form action="#">
+                        <div class="email">
+                            <div class="text">Email *</div>
+                            <input type="email" required />
+                        </div>
+                        <div class="msg">
+                            <div class="text">Message *</div>
+                            <textarea rows="2" cols="25" required></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <center>
+                <span class="credit"><a href="#">CONSTRUCTION EQUIPMENT RENTAL APP</a></span>
+                <span class="far fa-copyright"></span><span> 2023 All rights reseved.</span>
+            </center>
+        </div>
+    </footer>
+    {% endblock content%}
+</body>
+</html>

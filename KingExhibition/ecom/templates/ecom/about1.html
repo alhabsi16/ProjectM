@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>About Us </title>
+    {%load static %}
+       <link rel="stylesheet" type="text/css" href="{%static 'style/style.css' %}" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% block content%}
+      <!---Header-->
+    <header id="home" class="header">
+        <!--Navigation-->
+        <nav class="nav">
+            <div class="navigation container">
+            <div class="logo">
+                <h1><img src="../../static/image/Picture2.png" alt=""/></h1>
+            </div>
+            <div class="menu">
+             <div class="top-nav">
+              <div class="logo">
+                  <h1>CONSTRUCTION EQUIPMENT RENTAL APP</h1>
+                  </div>
+                 <div class="close">
+                    <i class='bx bx-x'></i>
+                 </div>
+             </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="{% url 'home' %}" class="nav-link scroll-link">Home</a>
+                        <li class="nav-item">
+                        <a href="{% url 'product' %}" class="nav-link scroll-link">Product</a>
+                            <li class="nav-item">
+                        <a href="{% url 'about1' %}" class="nav-link scroll-link">About Us</a>
+                            <li class="nav-item">
+                       
+                        <a href="{% url 'shopping' %}"  class="alla">Shopping</a>
+                                     <li class="nav-item">
+                        <a href="{% url 'contact' %}" class="nav-link scroll-link">Contact</a>
+                                         <li class="nav-item">
+                        <a href="{% url 'cart' %}" class="nav-link icon"></a>
+                        <i class= "bx bx-shopping-bag"></i>
+                    </li>
+                </ul>
+           </div>
+            </div>
+                  </nav>
+    <div class="section1">
+        <div class="container1">
+            <div class="content-section1">
+                <div class="title">
+                    <h1>ABOUT US</h1>
+                </div>
+                <div class="content">
+                <h3> CONSTRUCTION EQUIPMENT RENTAL APP. </h3>
+                   <p>An application for renting construction equipment that provides construction equipment rental services to users and finding equipment easily in one platform in the Sultanate of Oman. Moreover, 
+                    the application is easy to use and all age groups can view the products available in the application.</p>
+                <div class="button">
+                    <a href="{% url 'contact' %}">Read More</a>
+                </div>
+                <div class="social">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+                 </div>
+            </div>
+        </div>
+        <div class="image-section1">
+        <img class="#" src="{% static 'image/123.jpg' %}">
+            </div>
+    </div>
+            </header>
+    {% endblock content%}
+</body>
+</html>

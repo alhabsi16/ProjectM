@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'ecom/main.html' %}
+   {% load static %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    
+    <title>Shopping</title>
+    
+  <link rel="stylesheet" type="text/css" href="{%static 'style/style.css' %}" />
+    
+
+</head>
+<body>
+
+  {% block content %}
+   <div class="row">
+       {% for product in products %}
+       <div class="col-lg-4">
+           <img class="thumbnail" src="{{product.image.url}}">
+           <div class="box-element product">
+               <h6><strong>{{product.name}}</strong></h6>
+               <hr>
+               {#<a class="btn btn-outline-success" href="{{product.Id}}" > ADD TO CART </a>#}
+               <a class="btn btn-outline-success" href="{% url 'cart' %}" > ADD TO CART </a>
+               <a class="btn btn-outline-success" href="{% url 'pro' %}">View</a>
+               <h4 style="display:inline-block;float: right">{{product.price|floatformat:2}}</h4>
+           </div>
+       </div>
+       {% endfor %}
+   </div>
+  {% endblock content %}
+</body>
+</html>
